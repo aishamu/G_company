@@ -1,8 +1,6 @@
 <?php
   // Create database connection
-  $db = mysqli_connect("localhost", "root", "", "dbvi6uvue289fa");
-
-
+  $db = mysqli_connect("localhost", "root", "", "company");
   $result = mysqli_query($db, "SELECT * FROM ajax_images");
 ?>
 

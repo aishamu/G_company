@@ -181,8 +181,7 @@ return [
         Unisharp\Ckeditor\ServiceProvider::class,
         Maatwebsite\Excel\ExcelServiceProvider::class,
         Cyberduck\LaravelExcel\ExcelServiceProvider::class,
-        Adldap\Laravel\AdldapServiceProvider::class,
-        Adldap\Laravel\AdldapAuthServiceProvider::class
+       
     ],
 
     /*

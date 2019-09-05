@@ -67,8 +67,8 @@
        </tr>
        @foreach($data as $row)
        <tr>
-        <td>{{ $row->emp_name }}</td>
-        <td>{{ $row->emp_email }}</td>
+        <td>{{ $row->empName }}</td>
+        <td>{{ $row->empEmail }}</td>
 
        </tr>
        @endforeach

@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\AjaxImage;
-use App\Models\User;
+use App\user;
 
 class AjaxImageUploadController extends Controller
 {

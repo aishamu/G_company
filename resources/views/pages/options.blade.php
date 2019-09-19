@@ -9,7 +9,7 @@
             <div class="panel panel-default">
               <div class="w3-center">
               <div class="w3-bar">
-              <a href="/img" > All Cards  </br>
+              <a href="/imgg" > All Cards  </br>
               <a href="/ajaxImageUpload" >Upload images  </br>
               <a href="/import_excel">Upload Employees Information </div></div>
 

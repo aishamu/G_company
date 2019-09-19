@@ -1,62 +1,38 @@
-<?php
-
-  // Create database connection
-
-  $db = mysqli_connect("localhost", "root", "", "company");
-
-  $result = mysqli_query($db, "SELECT * FROM ajax_images");
-
-  $result1 = mysqli_query($db, "SELECT emp_name FROM  table_employees");
-
-
-?>
-
 @extends('layouts.app')
-
 
 @section('content')
 
-<a href="/options" class="previous">&laquo; Previous</a>
+  <div class="container">
+  <a href="/options" class="previous">« Previous</a>
 </br>
 </br>
 </br>
 </br>
+
+   @if(count($errors) > 0)
+    <div class="alert alert-danger">
+     Upload Validation Error<br><br>
+     <ul>
+      @foreach($errors->all() as $error)
+      <li>{{ $error }}</li>
+      @endforeach
+     </ul>
+    </div>
+   @endif
+
+<div class="row">
+
+       @foreach($employees as $row)
 
 <?php
+echo "<div class='col-md-4'>";?>
+<img src="{{ asset('images/' . $data [0]->image) }}" />
+<?= "<div class='centered'>" .$row->empName ?>
 
+</div>
+</div>
 
-$rows=mysqli_fetch_array ($result,MYSQLI_ASSOC);
-$i=1;
-$j=1;
-$k=1;
+         @endforeach
+</div>
 
-while($row = mysqli_fetch_array ($result1,MYSQLI_ASSOC)) {
-  if($j==$i){
-    echo"<div class='row'>";
-$j=$i+4;
-  }
-
-
-                          echo "<div class='col-md-3'>";
-                           echo "<img src='images/".$rows['image']."' >";
-                           echo"<div class='centered'>" .$row['emp_name'];
-                           echo "</div>";
-                           echo "</div>";
-
-
-
-
-                        }
-
-
-if($k==$i){
-  echo"</div>";
-$k=$k=4;
-}
-  $i++;                    ?>
-
-
-
-
-
-  @endsection
+  @endsection('content')

@@ -16,6 +16,7 @@ class CreateAjaxImageTabel extends Migration
       Schema::create('ajax_images', function (Blueprint $table) {
                  $table->increments('id');
                  $table->string('image');
+                 //$table->string('emp_id');
                  $table->timestamps();
              });    }
 

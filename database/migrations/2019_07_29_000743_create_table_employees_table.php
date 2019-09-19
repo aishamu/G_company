@@ -17,6 +17,8 @@ class CreateTableEmployeesTable extends Migration
                  $table->increments('id');
                  $table->string('empName');
                  $table->string('empEmail');
+                 
+
 
               });
     }

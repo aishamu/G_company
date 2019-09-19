@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use DB;
 use Excel;
 use Illuminate\Http\Request;
+use App\Employee;
+use App\AjaxImage;
+
 
 class ImportExcelController extends Controller
 {

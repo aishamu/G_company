@@ -29,9 +29,12 @@ Route::get('/options', function () {
 Route::get('ajaxImageUpload', ['uses'=>'AjaxImageUploadController@ajaxImageUpload']);
 Route::post('ajaxImageUpload', ['as'=>'ajaxImageUpload','uses'=>'AjaxImageUploadController@ajaxImageUploadPost']);
 
-Route::get('/img', function () {
-    return view('pages.img');
-});
+//Route::get('/img', function () {
+  //  return view('pages.img');
+//});
+
+Route::get('/imgg', 'image@index');
+
 
 Route::get('/card', function () {
     return view('pages.card');

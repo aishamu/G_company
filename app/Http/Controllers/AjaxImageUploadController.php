@@ -6,7 +6,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use Validator;
 use App\AjaxImage;
-use App\Models\User;
+use App\user;
 
 class AjaxImageUploadController extends Controller
 {
@@ -39,7 +39,7 @@ class AjaxImageUploadController extends Controller
       AjaxImage::create($input);
 
 
-      return view("pages.img");
+      return view("pages.options");
     }
 
 
@@ -50,7 +50,7 @@ class AjaxImageUploadController extends Controller
   public function index()
   {
       $users=User::all();
-       return view('pages.img',['users'=> $users]);
+       return view('pages.options',['users'=> $users]);
   }
 
 
